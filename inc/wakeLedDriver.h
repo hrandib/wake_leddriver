@@ -27,14 +27,24 @@ namespace Mcudrv
 		};
 	};
 
-	static const uint8_t ledLinear[55] = {
-		46,	48,	50,	52,	54,	56, 58, 60, 62, 64,
-		66, 68, 70, 72, 74,	76, 78, 80, 83, 86,
-		89, 92, 95, 98, 101, 104, 107, 110, 113, 117,
-		121, 125, 129, 133, 137, 141, 145, 150, 155, 160,
-		165, 170, 175, 180,	186, 192, 198, 204, 210, 217,
-		224, 231, 238, 245, 255
+	static const uint8_t ledLinear[75] = {
+		26, 28, 30, 32, 34, 36, 38, 40, 42, 44,
+		46, 48, 50, 52, 54, 56, 58, 60, 62, 64,
+		66, 68, 70, 72, 74, 76, 78, 80, 82, 84,
+		86, 89, 92, 95, 98, 101, 104, 107, 110,	113,
+		116, 119, 122, 125, 128, 131, 134, 137, 140, 143,
+		147, 151, 155, 159, 163, 167, 171, 175, 179, 183,
+		187, 191, 195, 199, 204, 209, 214, 219, 224, 229,
+		234, 239, 244, 249, 254
 	};
+
+//	{	46, 48,	50, 52, 54, 56, 58, 60, 62, 64,
+//		66, 68, 70, 72, 74,	76, 78, 80, 83, 86,
+//		89, 92, 95, 98, 101, 104, 107, 110, 113, 117,
+//		121, 125, 129, 133, 137, 141, 145, 150, 155, 160,
+//		165, 170, 175, 180,	186, 192, 198, 204, 210, 217,
+//		224, 231, 238, 245, 255
+//	};
 
 	template<typename Features = LedDriverDefaultFeatures>
 	class LedDriver : WakeData
@@ -236,7 +246,7 @@ namespace Mcudrv
 				{
 					if(pdata.n == 1)
 					{
-						if(!(pdata.buf[0] & 0x80))
+						if(!(pdata.buf[0] & 0x80)) //1st channel selected
 						{
 							pdata.buf[1] = IncBrightness(pdata.buf[0], Ch1);
 						}
@@ -263,13 +273,13 @@ namespace Mcudrv
 				{
 					if(pdata.n == 1)
 					{
-						if(!(pdata.buf[0] & 0x80))
+						if(!(pdata.buf[0] & 0x80)) //1st channel selected
 						{
-							DecBrightness(pdata.buf[0], Ch1);
+							pdata.buf[1] = DecBrightness(pdata.buf[0], Ch1);
 						}
 						else if(Ch2)
 						{
-							DecBrightness(pdata.buf[0] & 0x7F, Ch2);
+							pdata.buf[1] = DecBrightness(pdata.buf[0] & 0x7F, Ch2);
 						}
 						else
 						{
