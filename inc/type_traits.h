@@ -4,6 +4,12 @@
 
 namespace stdx
 {
+	template<uint32_t val>
+	struct Int2Type
+	{
+		enum {value = val};
+	};
+
 	template<bool b, typename T1, typename T2>
 	struct conditional
 	{
@@ -48,19 +54,15 @@ namespace stdx
 	{
 		typedef T type;
 	};
-
-	template<>
-	struct make_unsigned<int32_t>
+	template<> struct make_unsigned<int32_t>
 	{
 	  typedef uint32_t type;
 	};
-	template<>
-	struct make_unsigned<int16_t>
+	template<> struct make_unsigned<int16_t>
 	{
 	  typedef uint16_t type;
 	};
-	template<>
-	struct make_unsigned<int8_t>
+	template<> struct make_unsigned<int8_t>
 	{
 	  typedef uint8_t type;
 	};
@@ -70,12 +72,9 @@ namespace stdx
 	{
 		static const bool value = false;
 	};
-	template<>
-	struct is_signed<int8_t> { static const bool value = true; };
-	template<>
-	struct is_signed<int16_t> { static const bool value = true; };
-	template<>
-	struct is_signed<int32_t> { static const bool value = true; };
+	template<> struct is_signed<int8_t> { static const bool value = true; };
+	template<> struct is_signed<int16_t> { static const bool value = true; };
+	template<> struct is_signed<int32_t> { static const bool value = true; };
 
 	template<typename T, typename U>
 	struct is_same

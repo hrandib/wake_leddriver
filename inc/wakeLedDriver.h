@@ -27,14 +27,13 @@ namespace Mcudrv
 		};
 	};
 
-	static const uint8_t ledLinear[45] = {
-		56, 58, 60, 62, 64, 66, 68, 70, 72, 74,
-		77, 80, 83, 86, 89, 92, 95, 98, 101, 104, 107,
-		111, 115, 119, 123, 127, 131,
-		136, 141, 146, 151, 156, 161,
-		167, 173, 179, 185, 191,
-		198, 205, 212, 219,
-		228, 237, 246
+	static const uint8_t ledLinear[55] = {
+		46,	48,	50,	52,	54,	56, 58, 60, 62, 64,
+		66, 68, 70, 72, 74,	76, 78, 80, 83, 86,
+		89, 92, 95, 98, 101, 104, 107, 110, 113, 117,
+		121, 125, 129, 133, 137, 141, 145, 150, 155, 160,
+		165, 170, 175, 180,	186, 192, 198, 204, 210, 217,
+		224, 231, 238, 245, 255
 	};
 
 	template<typename Features = LedDriverDefaultFeatures>
@@ -80,33 +79,41 @@ namespace Mcudrv
 			}
 			curState.fanSpeed = speed;
 		}
+		#pragma inline=forced
+		static void SetCh1()
+		{
+			using namespace T2;
+			static uint8_t br = state_nv.ch[Ch1];
+			if(br < curState.ch[Ch1])
+				++br;
+			else if(br > curState.ch[Ch1])
+				--br;
+			Timer2::WriteCompareByte<T2::Ch3>(br < ledLinear[0] ? br : ledLinear[br - ledLinear[0]]);
+		}
+		#pragma inline=forced
+		static void SetCh2(stdx::Int2Type<true>)
+		{
+			using namespace T2;
+			static uint8_t br = state_nv.ch[Ch2];
+			if(br < curState.ch[Ch2])
+				++br;
+			else if(br > curState.ch[Ch2])
+				--br;
+			Timer2::WriteCompareByte<T2::Ch2>(br < ledLinear[0] ? br : ledLinear[br - ledLinear[0]]);
+		}
+		#pragma inline=forced
+		static void SetCh2(stdx::Int2Type<false>) { }
+		#pragma inline=forced
 		static void UpdIRQ()	//Soft Dimming
 		{
-			if (T2::Timer2::CheckIntStatus(T2::IRQ_Update))
+			using namespace T2;
+			if(Timer2::CheckIntStatus(IRQ_Update))
 			{
-				T2::Timer2::ClearIntFlag(T2::IRQ_Update);
-				if (T2::Timer2::ReadCompareByte<T2::Ch3>() < curState.ch[Ch1])
-				{
-					T2::Timer2::GetCompareByte<T2::Ch3>()++;
-				}
-				else if (T2::Timer2::ReadCompareByte<T2::Ch3>() > curState.ch[Ch1])
-				{
-					T2::Timer2::GetCompareByte<T2::Ch3>()--;
-				}
-				if (Features::TwoChannels)
-				{
-					if (T2::Timer2::ReadCompareByte<T2::Ch2>() < curState.ch[Ch2])
-					{
-						T2::Timer2::GetCompareByte<T2::Ch2>()++;
-					}
-					else if (T2::Timer2::ReadCompareByte<T2::Ch2>() > curState.ch[Ch2])
-					{
-						T2::Timer2::GetCompareByte<T2::Ch2>()--;
-					}
-				}
+				Timer2::ClearIntFlag(IRQ_Update);
+				SetCh1();
+				SetCh2(stdx::Int2Type<Features::TwoChannels>());
 				if(Features::FanControl)
 				{
-					using namespace T2;
 					if(Timer2::ReadCompareByte<T2::Ch1>() < curState.fanSpeed)
 					{
 						Timer2::GetCompareByte<T2::Ch1>()++;
@@ -308,38 +315,29 @@ namespace Mcudrv
 			}
 		}
 
+		#pragma inline=forced
 		static void SetBrightness(uint8_t br, const Ch ch = Ch1)
 		{
-			//Led brightness linearisation
-			if(br > 99) br = 255;
-			else if(br > 54) br = ledLinear[br - 55];
+			if(br > 100) br = 100;
 			curState.ch[ch] = br;
 		}
-		static uint8_t GetBrightness(const Ch ch = Ch1)
+		#pragma inline=forced
+		static uint8_t GetBrightness(Ch ch = Ch1)
 		{
-			uint8_t br = curState.ch[ch];
-			if(br > 54)
-			{
-				for(uint8_t i = 0; i < sizeof(ledLinear); ++i)
-				{
-					if(ledLinear[i] == br) return i + 55;
-				}
-				return 100;
-			}
-			return br;
+			return curState.ch[ch];
 		}
-		static uint8_t IncBrightness(const uint8_t step, const Ch ch = Ch1)
+		static uint8_t IncBrightness(uint8_t step, Ch ch = Ch1)
 		{
 			uint8_t cur = GetBrightness(ch);
 			if(cur < 100)
 			{
+				step = step < 100 ? step : 100;
 				cur += step;
-				if(cur > 100) cur = 100;
 				SetBrightness(cur, ch);
 			}
 			return cur;
 		}
-		static uint8_t DecBrightness(const uint8_t step, const Ch ch = Ch1)
+		static uint8_t DecBrightness(uint8_t step, Ch ch = Ch1)
 		{
 			uint8_t cur = GetBrightness(ch);
 			if(cur <= step) cur = 0;
