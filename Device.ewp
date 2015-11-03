@@ -1596,40 +1596,10 @@
       <name>$PROJ_DIR$\inc\circularBuffer.h</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\inc\encoder.h</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\inc\Relays.h</name>
-    </file>
-    <file>
       <name>$PROJ_DIR$\inc\string_utils.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\inc\type_traits.h</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\inc\wakeLedDriver.h</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\inc\wakeLedStrip.h</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\inc\wakeSwitch.h</name>
-    </file>
-  </group>
-  <group>
-    <name>Resources</name>
-    <file>
-      <name>$PROJ_DIR$\Resources\fonts.cpp</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Resources\fonts.h</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Resources\icons.cpp</name>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Resources\icons.h</name>
     </file>
   </group>
   <group>
@@ -1684,6 +1654,21 @@
     </file>
     <file>
       <name>$PROJ_DIR$\stm8s_hal\wake.h</name>
+    </file>
+  </group>
+  <group>
+    <name>wake</name>
+    <file>
+      <name>$PROJ_DIR$\wake\ledDriver.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\wake\ledStrip.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\wake\relays.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\wake\switch.h</name>
     </file>
   </group>
   <file>

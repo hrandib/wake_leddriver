@@ -2,28 +2,17 @@
 #include "gpio.h"
 #include "itc.h"
 
-//typedef Mcudrv::InvertedPin<Mcudrv::Pd0> Green;
-//typedef Mcudrv::Pd2 Led1;
-//typedef Mcudrv::Pd3 Led2;
-//typedef Mcudrv::Pd4 Led3;
 typedef Mcudrv::Pb4 Yellow;
 typedef Mcudrv::Pb5 Green;
 
-//#define UARTECHO
-#include "uart.h"
 #include "delay.h"
 #include "timers.h"
 #include <intrinsics.h>
 #include "pinlist.h"
-//#include "ssd1306.h"
 using namespace Mcudrv;
-//typedef Twis::SoftTwi<Twis::Fast> Twi;
-//typedef ssd1306<Twi> Disp;
-
-//typedef Pinlist<Pd2, SequenceOf<3> > Leds;
 
 typedef Pinlist<Yellow, Green> Leds;
-#include "wakeLedDriver.h"
+#include "wake/ledDriver.h"
 //#include "wake.h"
 
 //typedef Uarts::UartIrq<128, 8> Uart;
@@ -31,10 +20,9 @@ typedef Pinlist<Yellow, Green> Leds;
 //template void Uart::RxISR();	//the compliler to generate code for IRQ
 //#include "onewire.h"
 
-//typedef Wk::ModuleList<Wk::LedDriver<> > moduleList;
 typedef Wk::LedDriver<> LedDriver;
-//typedef Uarts::Uart Uart;
-typedef Wk::Wake<LedDriver> Wake;
+typedef Wk::ModuleList<Wk::LedDriver<> > moduleList;
+typedef Wk::Wake<moduleList> Wake;
 template void Wake::TxISR();
 template void Wake::RxISR();
 
@@ -49,23 +37,9 @@ int main()
  	GpioB::WriteConfig<0xFF, GpioBase::In_Pullup>();
  	GpioC::WriteConfig<0xFF, GpioBase::In_Pullup>();
  	GpioD::WriteConfig<0xFF, GpioBase::In_Pullup>();
-	GpioB::SetConfig<P4 | P5, GpioBase::Out_OpenDrain>();
-	Green::Clear();
-	Yellow::Clear();
-//	Green::SetConfig<GpioBase::Out_OpenDrain>();
-//	Yellow::Set();
-//	Pa3::SetConfig<GpioBase::Out_PushPull>();
-//	Pa3::Clear();
-//	Leds::SetConfig<GpioBase::Out_PushPull>();
-//	Green::SetConfig<GpioBase::Out_PushPull>();
+//	GpioB::SetConfig<P4 | P5, GpioBase::Out_OpenDrain>();
 //	Green::Clear();
-//	Uart::Init<Uarts::DefaultCfg, 9600UL>();
-//	Uart::Puts("\rHello\r\n");
-//	Twi::Init();
-//	Disp::Init();
-//	Disp::SetContrast(8);
-//	Disp::Fill();
-//	Disp::Puts("Hello\r\n");
+//	Yellow::Clear();
 	Wake::Init();
 	enableInterrupts();
 //	Ow::Init();
@@ -77,19 +51,6 @@ int main()
 //	Tsense::PrintID<Disp>();
 	while(true)
 	{
-//		switch(Uart::Getch())
-//		{
-//		case 'a':
-//			Led1::Toggle();
-//			break;
-//		case 's':
-//			Led2::Toggle();
-//			break;
-//		default:
-//			Led3::Toggle();
-
-//		}
-
 		Wake::Process();
 /*		if(!Tsense::Convert())
 		{

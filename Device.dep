@@ -2,7 +2,7 @@
 
 <project>
   <fileVersion>2</fileVersion>
-  <fileChecksum>2267595811</fileChecksum>
+  <fileChecksum>3581119774</fileChecksum>
   <configuration>
     <name>Debug</name>
     <outputs>
@@ -16,13 +16,13 @@
       <file>$PROJ_DIR$\Debug\Obj\main.o</file>
       <file>$TOOLKIT_DIR$\config\lnkstm8s003f3.icf</file>
       <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
-      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
-      <file>$PROJ_DIR$\inc\crc.h</file>
-      <file>$PROJ_DIR$\stm8s_hal\stdint.h</file>
-      <file>$TOOLKIT_DIR$\lib\dlstm8smn.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
       <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
       <file>$PROJ_DIR$\Debug\Obj\crc.o</file>
-      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+      <file>$TOOLKIT_DIR$\lib\dlstm8smn.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+      <file>$PROJ_DIR$\stm8s_hal\stdint.h</file>
+      <file>$PROJ_DIR$\inc\crc.h</file>
       <file>$PROJ_DIR$\Debug\Obj\icons.pbi</file>
       <file>$PROJ_DIR$\inc\crc.cpp</file>
       <file>$PROJ_DIR$\Debug\Obj\icons.o</file>
@@ -65,7 +65,7 @@
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 10 31 14 21 32 1 28 13 24</file>
+          <file> 14 31 11 21 32 1 28 13 24</file>
         </tool>
       </inputs>
     </file>
@@ -84,7 +84,7 @@
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 21 10 31 28 14 32 13 24 3</file>
+          <file> 21 14 31 28 11 32 13 24 3</file>
         </tool>
       </inputs>
     </file>
@@ -93,7 +93,7 @@
       <outputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 15</file>
+          <file> 12</file>
         </tool>
         <tool>
           <name>BICOMP</name>
@@ -103,7 +103,7 @@
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 5 12</file>
+          <file> 5 15</file>
         </tool>
       </inputs>
     </file>
@@ -122,7 +122,7 @@
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 16</file>
+          <file> 10</file>
         </tool>
       </inputs>
     </file>
@@ -131,7 +131,7 @@
       <outputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 15</file>
+          <file> 12</file>
         </tool>
         <tool>
           <name>BICOMP</name>
@@ -141,7 +141,7 @@
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 24 10 14 32 13 21 31 28 11</file>
+          <file> 24 14 11 32 13 21 31 28 16</file>
         </tool>
       </inputs>
     </file>
@@ -173,29 +173,40 @@
     <name>Release</name>
     <outputs>
       <file>$PROJ_DIR$\inc\circularBuffer.h</file>
+      <file>$PROJ_DIR$\inc\Relays.h</file>
+      <file>$PROJ_DIR$\inc\encoder.h</file>
       <file>$PROJ_DIR$\inc\string_utils.h</file>
       <file>$PROJ_DIR$\inc\type_traits.h</file>
       <file>$PROJ_DIR$\inc\wakeLedDriver.h</file>
+      <file>$PROJ_DIR$\inc\wakeLedStrip.h</file>
+      <file>$PROJ_DIR$\inc\wakeSwitch.h</file>
       <file>$PROJ_DIR$\Resources\fonts.cpp</file>
       <file>$PROJ_DIR$\Resources\fonts.h</file>
       <file>$PROJ_DIR$\Resources\icons.cpp</file>
       <file>$PROJ_DIR$\Resources\icons.h</file>
+      <file>$PROJ_DIR$\stm8s_hal\adc.h</file>
+      <file>$PROJ_DIR$\stm8s_hal\adc_keyboard.h</file>
+      <file>$PROJ_DIR$\stm8s_hal\am2302.h</file>
       <file>$PROJ_DIR$\stm8s_hal\clock.h</file>
       <file>$PROJ_DIR$\stm8s_hal\crc.cpp</file>
       <file>$PROJ_DIR$\stm8s_hal\crc.h</file>
       <file>$PROJ_DIR$\stm8s_hal\delay.h</file>
       <file>$PROJ_DIR$\stm8s_hal\flash.h</file>
       <file>$PROJ_DIR$\stm8s_hal\gpio.h</file>
+      <file>$PROJ_DIR$\stm8s_hal\i2c.h</file>
+      <file>$PROJ_DIR$\stm8s_hal\onewire.h</file>
+      <file>$PROJ_DIR$\stm8s_hal\static_assert.h</file>
       <file>$PROJ_DIR$\stm8s_hal\stm8s.h</file>
+      <file>$PROJ_DIR$\stm8s_hal\stm8s_it.h</file>
       <file>$PROJ_DIR$\stm8s_hal\timers.h</file>
       <file>$PROJ_DIR$\stm8s_hal\uart.h</file>
       <file>$PROJ_DIR$\stm8s_hal\wake.h</file>
       <file>$PROJ_DIR$\main.cpp</file>
       <file>$TOOLKIT_DIR$\config\lnkstm8s003f3.icf</file>
+      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+      <file>$TOOLKIT_DIR$\lib\dlstm8smn.h</file>
       <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
       <file>$PROJ_DIR$\stm8s_hal\stdint.h</file>
-      <file>$TOOLKIT_DIR$\lib\dlstm8smn.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
       <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
       <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
       <file>$TOOLKIT_DIR$\lib\dlstm8smn.a</file>
@@ -220,13 +231,18 @@
       <file>$TOOLKIT_DIR$\lib\dbgstm8smn.a</file>
       <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
       <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+      <file>$PROJ_DIR$\Release\Obj\Device.pbd</file>
+      <file>$PROJ_DIR$\wake\ledStrip.h</file>
+      <file>$PROJ_DIR$\wake\relays.h</file>
+      <file>$PROJ_DIR$\wake\ledDriver.h</file>
+      <file>$PROJ_DIR$\wake\switch.h</file>
     </outputs>
     <file>
       <name>[ROOT_NODE]</name>
       <outputs>
         <tool>
           <name>ILINK</name>
-          <file> 43 33</file>
+          <file> 54 44</file>
         </tool>
       </outputs>
     </file>
@@ -235,21 +251,21 @@
       <outputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 39</file>
+          <file> 50</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 35</file>
+          <file> 46</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 5 21</file>
+          <file> 9 34</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 21 5</file>
+          <file> 34 9</file>
         </tool>
       </inputs>
     </file>
@@ -258,21 +274,21 @@
       <outputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 40</file>
+          <file> 51</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 38</file>
+          <file> 49</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 7 21</file>
+          <file> 11 34</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 7 21</file>
+          <file> 11 34</file>
         </tool>
       </inputs>
     </file>
@@ -281,21 +297,21 @@
       <outputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 41</file>
+          <file> 52</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 36</file>
+          <file> 47</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 10 21</file>
+          <file> 17 34</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 10 21</file>
+          <file> 17 34</file>
         </tool>
       </inputs>
     </file>
@@ -304,21 +320,17 @@
       <outputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 42</file>
+          <file> 53</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 37</file>
+          <file> 48</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 14 23 13 2 21 46 20 24 29 22 25 28 27 47 32 16 8 15 0 1 11 34 3 30 31 17 12 10</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 24 1 23 14 32 11 46 13 16 15 34 17 2 29 20 21 12 47 28 27 22 25 8 0 10</file>
+          <file> 24 31 20 4 34 57 33 35 40 32 36 39 38 58 43 18 15 26 45 62 41 42 28 27 0 3 19 17</file>
         </tool>
       </inputs>
     </file>
@@ -327,17 +339,17 @@
       <outputs>
         <tool>
           <name>ILINK</name>
-          <file> 33</file>
+          <file> 44</file>
         </tool>
         <tool>
           <name>OBJCOPY</name>
-          <file> 44</file>
+          <file> 55</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ILINK</name>
-          <file> 19 41 39 40 42 26 45</file>
+          <file> 30 52 53 37 56</file>
         </tool>
       </inputs>
     </file>
