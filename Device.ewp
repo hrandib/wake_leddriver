@@ -118,7 +118,7 @@
         </option>
         <option>
           <name>GenMathFunctionDescription</name>
-          <state></state>
+          <state>Default variants of cos, sin, tan, log, log10, pow, and exp.</state>
         </option>
       </data>
     </settings>
@@ -147,7 +147,7 @@
         </option>
         <option>
           <name>IccOptLevel</name>
-          <state>3</state>
+          <state>0</state>
         </option>
         <option>
           <name>IccOptStrategy</name>
@@ -156,12 +156,12 @@
         </option>
         <option>
           <name>IccOptLevelSlave</name>
-          <state>3</state>
+          <state>0</state>
         </option>
         <option>
           <name>IccOptAllowList</name>
           <version>0</version>
-          <state>111111</state>
+          <state>000000</state>
         </option>
         <option>
           <name>IccGenerateDebugInfo</name>
@@ -205,15 +205,15 @@
         </option>
         <option>
           <name>CCListCFile</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>CCListCMnemonics</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>CCListCMessages</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>CCListAssFile</name>
@@ -249,7 +249,7 @@
         </option>
         <option>
           <name>CCCompilerRuntimeInfo</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>PreInclude</name>
@@ -258,7 +258,9 @@
         <option>
           <name>CCIncludePath2</name>
           <state>$PROJ_DIR$\inc</state>
-          <state>$PROJ_DIR$\src</state>
+          <state>$PROJ_DIR$\stm8\hal</state>
+          <state>$PROJ_DIR$\stm8\common</state>
+          <state>$PROJ_DIR$\stm8\wake</state>
         </option>
         <option>
           <name>CCStdIncCheck</name>
@@ -317,7 +319,7 @@
         </option>
         <option>
           <name>IccStaticDestr</name>
-          <state>1</state>
+          <state>0</state>
         </option>
         <option>
           <name>IccFloatSemantics</name>
@@ -507,6 +509,7 @@
       <data>
         <extensions></extensions>
         <cmdline></cmdline>
+        <hasPrio>0</hasPrio>
       </data>
     </settings>
     <settings>
@@ -603,11 +606,11 @@
         </option>
         <option>
           <name>IlinkIcfOverride</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>IlinkIcfFile</name>
-          <state>$TOOLKIT_DIR$\config\lnkstm8s105c6.icf</state>
+          <state>$PROJ_DIR$\stm8\linker\lnkstm8s003f3_bootloader.icf</state>
         </option>
         <option>
           <name>IlinkIcfFileSlave</name>
@@ -647,11 +650,11 @@
         </option>
         <option>
           <name>IlinkUseExtraOptions</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>IlinkExtraOptions</name>
-          <state></state>
+          <state>--redirect __intvect=ISR_TABLE</state>
         </option>
         <option>
           <name>IlinkAutoLibEnable</name>
@@ -859,20 +862,20 @@
         <option>
           <name>GenLibInFormatter</name>
           <version>0</version>
-          <state>2</state>
+          <state>6</state>
         </option>
         <option>
           <name>GenLibInFormatterDescription</name>
-          <state>Full formatting, without multibytes.</state>
+          <state>No specifier n, no float, no scan set, no assignment suppressing, without multibytes.</state>
         </option>
         <option>
           <name>GenLibOutFormatter</name>
           <version>0</version>
-          <state>2</state>
+          <state>6</state>
         </option>
         <option>
           <name>GenLibOutFormatterDescription</name>
-          <state>Full formatting, without multibytes.</state>
+          <state>No specifier a or A, no specifier n, no float, without multibytes</state>
         </option>
         <option>
           <name>GenStackSize</name>
@@ -998,7 +1001,7 @@
         </option>
         <option>
           <name>CCListCFile</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>CCListCMnemonics</name>
@@ -1006,11 +1009,11 @@
         </option>
         <option>
           <name>CCListCMessages</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>CCListAssFile</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>CCListAssSource</name>
@@ -1042,7 +1045,7 @@
         </option>
         <option>
           <name>CCCompilerRuntimeInfo</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>PreInclude</name>
@@ -1112,7 +1115,7 @@
         </option>
         <option>
           <name>IccStaticDestr</name>
-          <state>1</state>
+          <state>0</state>
         </option>
         <option>
           <name>IccFloatSemantics</name>
@@ -1150,11 +1153,11 @@
         </option>
         <option>
           <name>AsmDebugInfo</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>AsmListFile</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>AsmListNoDiagnostics</name>
@@ -1162,11 +1165,11 @@
         </option>
         <option>
           <name>AsmListIncludeCrossRef</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>AsmListMacroDefinitions</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>AsmListNoMacroExpansion</name>
@@ -1174,7 +1177,7 @@
         </option>
         <option>
           <name>AsmListAssembledOnly</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>AsmListTruncateMultiline</name>
@@ -1302,6 +1305,7 @@
       <data>
         <extensions></extensions>
         <cmdline></cmdline>
+        <hasPrio>0</hasPrio>
       </data>
     </settings>
     <settings>
@@ -1342,7 +1346,7 @@
         </option>
         <option>
           <name>IlinkDebugInfoEnable</name>
-          <state>1</state>
+          <state>0</state>
         </option>
         <option>
           <name>IlinkKeepSymbols</name>
@@ -1398,11 +1402,11 @@
         </option>
         <option>
           <name>IlinkIcfOverride</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>IlinkIcfFile</name>
-          <state>$TOOLKIT_DIR$\config\lnkstm8s105c6.icf</state>
+          <state>$PROJ_DIR$\stm8\linker\lnkstm8s003f3_bootloader.icf</state>
         </option>
         <option>
           <name>IlinkIcfFileSlave</name>
@@ -1442,11 +1446,11 @@
         </option>
         <option>
           <name>IlinkUseExtraOptions</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>IlinkExtraOptions</name>
-          <state></state>
+          <state>--redirect __intvec=ISR_TABLE</state>
         </option>
         <option>
           <name>IlinkAutoLibEnable</name>
@@ -1487,7 +1491,7 @@
         <option>
           <name>CrcSize</name>
           <version>0</version>
-          <state>1</state>
+          <state>2</state>
         </option>
         <option>
           <name>CrcAlign</name>
@@ -1513,7 +1517,7 @@
         </option>
         <option>
           <name>DoCrc</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>CrcFullSize</name>
@@ -1550,7 +1554,7 @@
         <option>
           <name>CrcAlgorithm</name>
           <version>0</version>
-          <state>1</state>
+          <state>2</state>
         </option>
         <option>
           <name>CrcUnitSize</name>
@@ -1559,7 +1563,7 @@
         </option>
         <option>
           <name>IlinkOptMergeDuplSections</name>
-          <state>0</state>
+          <state>1</state>
         </option>
       </data>
     </settings>
@@ -1580,7 +1584,7 @@
         </option>
         <option>
           <name>IarchiveOutput</name>
-          <state>###Unitialized###</state>
+          <state>C:\Projects\WakeLedDriver\Release\Exe\Device.a</state>
         </option>
       </data>
     </settings>
@@ -1670,6 +1674,9 @@
   </group>
   <group>
     <name>wake</name>
+    <file>
+      <name>$PROJ_DIR$\stm8\wake\bootloader.h</name>
+    </file>
     <file>
       <name>$PROJ_DIR$\stm8\wake\ledDriver.h</name>
     </file>

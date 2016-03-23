@@ -18,3 +18,4 @@ stm8/wake/led_driver.h
 stm8/wake/wake_base.h
 
 main.cpp
+stm8/wake/bootloader.h

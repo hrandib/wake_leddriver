@@ -41,7 +41,7 @@
         </option>
         <option>
           <name>DynDriver</name>
-          <state>STLINK_STM8</state>
+          <state>SIMULATOR_STM8</state>
         </option>
         <option>
           <name>CSpyDDFOverride</name>
@@ -258,7 +258,7 @@
         </option>
         <option>
           <name>CSpyRunToName</name>
-          <state>main</state>
+          <state>__iar_program_start</state>
         </option>
         <option>
           <name>CSpyMacOverride</name>
@@ -270,7 +270,7 @@
         </option>
         <option>
           <name>DynDriver</name>
-          <state>STLINK_STM8</state>
+          <state>SIMULATOR_STM8</state>
         </option>
         <option>
           <name>CSpyDDFOverride</name>
