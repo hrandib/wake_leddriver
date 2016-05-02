@@ -14,8 +14,7 @@ stm8/hal/pinlist.h
 stm8/hal/stm8s.h
 stm8/hal/timers.h
 stm8/hal/uart.h
-stm8/wake/led_driver.h
-stm8/wake/wake_base.h
 
 main.cpp
+stm8/wake/bootloaderDefines.h
 stm8/wake/bootloader.h
