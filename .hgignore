@@ -5,3 +5,4 @@ settings/
 *Backup*
 *.autosave
 *.log
+*.orig
