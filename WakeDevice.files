@@ -1,3 +1,6 @@
+stm8/linker/lnkstm8s003f3_bootloader.icf
+stm8/linker/lnkstm8s003f3_bootOffset.icf
+
 stm8/common/circularBuffer.h
 stm8/common/stdint.h
 stm8/common/string_utils.h
@@ -15,6 +18,12 @@ stm8/hal/stm8s.h
 stm8/hal/timers.h
 stm8/hal/uart.h
 
-main.cpp
+stm8/wake/wake_base.h
+stm8/wake/led_driver.h
 stm8/wake/bootloaderDefines.h
 stm8/wake/bootloader.h
+
+main.cpp
+
+stm8/wake/led_driver_mbi6651.h
+stm8/wake/led_driver_ncp3066.h

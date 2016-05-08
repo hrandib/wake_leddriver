@@ -1943,14 +1943,47 @@
   <group>
     <name>common</name>
     <file>
+      <name>$PROJ_DIR$\stm8\common\circularBuffer.h</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\stm8\common\stdint.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\stm8\common\string_utils.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\stm8\common\type_traits.h</name>
     </file>
   </group>
   <group>
+    <name>drivers</name>
+    <file>
+      <name>$PROJ_DIR$\stm8\drivers\adc_keyboard.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\stm8\drivers\am2302.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\stm8\drivers\encoder.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\stm8\drivers\s1d157xx.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\stm8\drivers\ssd1306.h</name>
+    </file>
+  </group>
+  <group>
     <name>hal</name>
+    <file>
+      <name>$PROJ_DIR$\stm8\hal\adc.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\stm8\hal\clock.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\stm8\hal\crc.cpp</name>
+    </file>
     <file>
       <name>$PROJ_DIR$\stm8\hal\crc.h</name>
     </file>
@@ -1964,7 +1997,22 @@
       <name>$PROJ_DIR$\stm8\hal\gpio.h</name>
     </file>
     <file>
+      <name>$PROJ_DIR$\stm8\hal\i2c.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\stm8\hal\itc.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\stm8\hal\onewire.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\stm8\hal\pinlist.h</name>
+    </file>
+    <file>
       <name>$PROJ_DIR$\stm8\hal\stm8s.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\stm8\hal\timers.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\stm8\hal\uart.h</name>
@@ -1973,7 +2021,19 @@
   <group>
     <name>wake</name>
     <file>
-      <name>$PROJ_DIR$\stm8\wake\bootloader.h</name>
+      <name>$PROJ_DIR$\stm8\wake\led_driver_mbi6651.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\stm8\wake\led_driver_ncp3066.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\stm8\wake\ledStrip.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\stm8\wake\relays.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\stm8\wake\switch.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\stm8\wake\wakeBase.h</name>

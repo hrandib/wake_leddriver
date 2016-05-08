@@ -1,33 +1,32 @@
 #include "stm8s.h"
+#include "itc.h"
+#include "gpio.h"
 #include "delay.h"
-#include "bootloader.h"
+#include "timers.h"
+#include "pinlist.h"
+#include "led_driver_mbi6651.h"
+#include <intrinsics.h>
 
 using namespace Mcudrv;
-using namespace Wk;
-typedef Bootloader<ID_STM8S003F3> Ldr;
+
+typedef Wk::LedDriver<> LedDriver;
+typedef Wk::ModuleList<Wk::LedDriver<> > moduleList;
+typedef Wk::Wake<moduleList> Wake;
+template void Wake::TxISR();
+template void Wake::RxISR();
 
 int main()
 {
-  Ldr::Init();
-  uint8_t count = 0;
-  while(true) {
-//wait for request ~256 ms and then (if no request);
-    while(--count) {
-			if(Ldr::ProcessHandshake()) {
-				break;
-			}
-      delay_us<1000>();
-    }
-// try to start user firmware if exist
-		if(!count) {
-			Ldr::Go();
-		}
-// go to process commands if got the request
-    else break;
-// firmware not exist, endless wait for a hahdshake
-  }
-//Never return from here
-  Ldr::Process();
+//	SysClock::Select(SysClock::HSE);
+	GpioA::WriteConfig<0xFF, GpioBase::In_Pullup>();
+ 	GpioB::WriteConfig<0xFF, GpioBase::In_Pullup>();
+ 	GpioC::WriteConfig<0xFF, GpioBase::In_Pullup>();
+ 	GpioD::WriteConfig<0xFF, GpioBase::In_Pullup>();
+	Wake::Init();
+	enableInterrupts();
+	while(true) {
+		Wake::Process();
+	}
 }
 
 
