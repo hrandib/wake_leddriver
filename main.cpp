@@ -4,7 +4,7 @@
 #include "delay.h"
 #include "timers.h"
 #include "pinlist.h"
-#include "led_driver.h"
+#include "led_driver_mbi6651.h"
 #include <intrinsics.h>
 
 using namespace Mcudrv;
@@ -24,8 +24,7 @@ int main()
  	GpioD::WriteConfig<0xFF, GpioBase::In_Pullup>();
 	Wake::Init();
 	enableInterrupts();
-	while(true)
-	{
+	while(true) {
 		Wake::Process();
 	}
 }

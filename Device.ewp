@@ -507,6 +507,7 @@
       <data>
         <extensions></extensions>
         <cmdline></cmdline>
+        <hasPrio>0</hasPrio>
       </data>
     </settings>
     <settings>
@@ -1276,7 +1277,7 @@
         <option>
           <name>OOCOutputFormat</name>
           <version>2</version>
-          <state>1</state>
+          <state>2</state>
         </option>
         <option>
           <name>OCOutputOverride</name>
@@ -1284,7 +1285,7 @@
         </option>
         <option>
           <name>OOCOutputFile</name>
-          <state>Device.hex</state>
+          <state>Device.bin</state>
         </option>
         <option>
           <name>OOCCommandLineProducer</name>
@@ -1302,6 +1303,7 @@
       <data>
         <extensions></extensions>
         <cmdline></cmdline>
+        <hasPrio>0</hasPrio>
       </data>
     </settings>
     <settings>
@@ -1342,7 +1344,7 @@
         </option>
         <option>
           <name>IlinkDebugInfoEnable</name>
-          <state>1</state>
+          <state>0</state>
         </option>
         <option>
           <name>IlinkKeepSymbols</name>
@@ -1374,7 +1376,7 @@
         </option>
         <option>
           <name>IlinkMapFile</name>
-          <state>1</state>
+          <state>0</state>
         </option>
         <option>
           <name>IlinkLogFile</name>
@@ -1398,11 +1400,11 @@
         </option>
         <option>
           <name>IlinkIcfOverride</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>IlinkIcfFile</name>
-          <state>$TOOLKIT_DIR$\config\lnkstm8s105c6.icf</state>
+          <state>C:\Projects\WakeLedDriver\stm8\linker\lnkstm8s003f3_bootOffset.icf</state>
         </option>
         <option>
           <name>IlinkIcfFileSlave</name>
@@ -1671,7 +1673,10 @@
   <group>
     <name>wake</name>
     <file>
-      <name>$PROJ_DIR$\stm8\wake\ledDriver.h</name>
+      <name>$PROJ_DIR$\stm8\wake\led_driver_mbi6651.h</name>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\stm8\wake\led_driver_ncp3066.h</name>
     </file>
     <file>
       <name>$PROJ_DIR$\stm8\wake\ledStrip.h</name>
