@@ -2036,7 +2036,7 @@
       <name>$PROJ_DIR$\stm8\wake\switch.h</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\stm8\wake\wakeBase.h</name>
+      <name>$PROJ_DIR$\stm8\wake\wake_base.h</name>
     </file>
   </group>
   <file>

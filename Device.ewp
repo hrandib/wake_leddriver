@@ -1376,7 +1376,7 @@
         </option>
         <option>
           <name>IlinkMapFile</name>
-          <state>0</state>
+          <state>1</state>
         </option>
         <option>
           <name>IlinkLogFile</name>
@@ -1404,7 +1404,7 @@
         </option>
         <option>
           <name>IlinkIcfFile</name>
-          <state>C:\Projects\WakeLedDriver\stm8\linker\lnkstm8s003f3_bootOffset.icf</state>
+          <state>$PROJ_DIR$\stm8\linker\lnkstm8s003f3_bootOffset.icf</state>
         </option>
         <option>
           <name>IlinkIcfFileSlave</name>
@@ -1688,7 +1688,7 @@
       <name>$PROJ_DIR$\stm8\wake\switch.h</name>
     </file>
     <file>
-      <name>$PROJ_DIR$\stm8\wake\wakeBase.h</name>
+      <name>$PROJ_DIR$\stm8\wake\wake_base.h</name>
     </file>
   </group>
   <file>

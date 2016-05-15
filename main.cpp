@@ -1,11 +1,23 @@
+#include <intrinsics.h>
 #include "stm8s.h"
 #include "itc.h"
 #include "gpio.h"
 #include "delay.h"
 #include "timers.h"
 #include "pinlist.h"
+
+#define INSTRUCTION_SET_VER_MAJOR 2
+#define INSTRUCTION_SET_VER_MINOR 1
+
+#define NCP3066
+
+#if defined NCP3066
+#include "led_driver_ncp3066.h"
+#elif defined LED_STRIP
+#include "led_driver_strip.h"
+#elif defined MBI6651
 #include "led_driver_mbi6651.h"
-#include <intrinsics.h>
+#endif
 
 using namespace Mcudrv;
 

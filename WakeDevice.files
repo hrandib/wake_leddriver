@@ -27,3 +27,4 @@ main.cpp
 
 stm8/wake/led_driver_mbi6651.h
 stm8/wake/led_driver_ncp3066.h
+stm8/wake/led_driver_strip.h
