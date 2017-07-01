@@ -984,6 +984,7 @@
         <option>
           <name>CCDefines</name>
           <state>STM8S003</state>
+          <state>F_CPU=2000000UL</state>
         </option>
         <option>
           <name>CCPreprocFile</name>

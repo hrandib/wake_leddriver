@@ -2,52 +2,52 @@
 
 <project>
   <fileVersion>2</fileVersion>
-  <fileChecksum>359437368</fileChecksum>
+  <fileChecksum>4105290411</fileChecksum>
   <configuration>
     <name>Debug</name>
     <outputs>
-      <file>$PROJ_DIR$\stm8\hal\crc.cpp</file>
-      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
-      <file>$PROJ_DIR$\Resources\fonts.cpp</file>
-      <file>$TOOLKIT_DIR$\lib\dlstm8smn.a</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
-      <file>$PROJ_DIR$\Debug\Exe\Device.hex</file>
-      <file>$PROJ_DIR$\stm8s_hal\crc.cpp</file>
-      <file>$PROJ_DIR$\inc\crc.h</file>
-      <file>$PROJ_DIR$\Resources\icons.h</file>
-      <file>$PROJ_DIR$\inc\crc.cpp</file>
-      <file>$TOOLKIT_DIR$\lib\dbgstm8smd.a</file>
-      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
-      <file>$PROJ_DIR$\main.cpp</file>
-      <file>$PROJ_DIR$\Resources\fonts.h</file>
       <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
+      <file>$PROJ_DIR$\Debug\Exe\Device.hex</file>
+      <file>$PROJ_DIR$\Resources\icons.h</file>
       <file>$PROJ_DIR$\Debug\Obj\fonts.o</file>
+      <file>$PROJ_DIR$\inc\crc.h</file>
+      <file>$PROJ_DIR$\stm8\hal\crc.cpp</file>
+      <file>$PROJ_DIR$\main.cpp</file>
+      <file>$PROJ_DIR$\inc\crc.cpp</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
       <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
-      <file>$PROJ_DIR$\stm8s_hal\crc.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\main.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\icons.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
       <file>$PROJ_DIR$\Debug\Obj\crc.o</file>
-      <file>$TOOLKIT_DIR$\config\lnkstm8s003f3.icf</file>
+      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
+      <file>$PROJ_DIR$\stm8s_hal\stdint.h</file>
+      <file>$PROJ_DIR$\Debug\Exe\templproj.out</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
+      <file>$PROJ_DIR$\Resources\icons.cpp</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+      <file>$PROJ_DIR$\Resources\fonts.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\crc.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\icons.o</file>
+      <file>$PROJ_DIR$\Debug\Exe\Light.hex</file>
       <file>$TOOLKIT_DIR$\lib\dlstm8smn.h</file>
       <file>$PROJ_DIR$\Debug\Obj\fonts.pbi</file>
-      <file>$PROJ_DIR$\Debug\Exe\templproj.out</file>
+      <file>$PROJ_DIR$\Debug\Obj\icons.pbi</file>
+      <file>$TOOLKIT_DIR$\lib\dbgstm8smd.a</file>
+      <file>$PROJ_DIR$\Resources\fonts.cpp</file>
       <file>$PROJ_DIR$\Debug\List\templproj.map</file>
-      <file>$PROJ_DIR$\Debug\Obj\icons.o</file>
-      <file>$PROJ_DIR$\stm8s_hal\stdint.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\crc.pbi</file>
-      <file>$PROJ_DIR$\Resources\icons.cpp</file>
-      <file>$PROJ_DIR$\Debug\Exe\Light.hex</file>
+      <file>$TOOLKIT_DIR$\lib\dlstm8smn.a</file>
+      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
+      <file>$PROJ_DIR$\stm8s_hal\crc.h</file>
+      <file>$PROJ_DIR$\stm8s_hal\crc.cpp</file>
+      <file>$TOOLKIT_DIR$\config\lnkstm8s003f3.icf</file>
     </outputs>
     <file>
       <name>[ROOT_NODE]</name>
       <outputs>
         <tool>
           <name>ILINK</name>
-          <file> 28 27</file>
+          <file> 28 14</file>
         </tool>
       </outputs>
     </file>
@@ -56,49 +56,30 @@
       <outputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 23</file>
+          <file> 11</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 32</file>
+          <file> 20</file>
         </tool>
       </outputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\Resources\fonts.cpp</name>
+      <name>$PROJ_DIR$\main.cpp</name>
       <outputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 16</file>
+          <file> 17</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 26</file>
+          <file> 31</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 14 15 1 17 4 13 19 25 31</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\stm8s_hal\crc.cpp</name>
-      <outputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 23</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 32</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 18 30</file>
+          <file> 30</file>
         </tool>
       </inputs>
     </file>
@@ -107,26 +88,7 @@
       <outputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 23</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 32</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 31 14 1 4 25 17 15 19 7</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\main.cpp</name>
-      <outputs>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 21</file>
+          <file> 11</file>
         </tool>
         <tool>
           <name>BICOMP</name>
@@ -136,7 +98,7 @@
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 11</file>
+          <file> 18 0 10 8 23 9 12 15 4</file>
         </tool>
       </inputs>
     </file>
@@ -149,13 +111,13 @@
         </tool>
         <tool>
           <name>OBJCOPY</name>
-          <file> 34 5</file>
+          <file> 22 1</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ILINK</name>
-          <file> 24 21 3 10</file>
+          <file> 34 17 29 26</file>
         </tool>
       </inputs>
     </file>
@@ -164,17 +126,55 @@
       <outputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 29</file>
+          <file> 21</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 22</file>
+          <file> 25</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 17 14 15 19 1 4 25 31 8</file>
+          <file> 9 0 12 15 10 8 23 18 2</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Resources\fonts.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 3</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 24</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 0 12 10 9 8 19 15 23 18</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\stm8s_hal\crc.cpp</name>
+      <outputs>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 11</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 20</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 32 13</file>
         </tool>
       </inputs>
     </file>
@@ -186,49 +186,51 @@
   <configuration>
     <name>Release</name>
     <outputs>
-      <file>$PROJ_DIR$\stm8\hal\delay.h</file>
-      <file>$PROJ_DIR$\stm8\hal\gpio.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+      <file>$PROJ_DIR$\stm8\hal\crc.h</file>
+      <file>$PROJ_DIR$\stm8\hal\clock.h</file>
+      <file>$PROJ_DIR$\stm8\hal\crc.cpp</file>
       <file>$PROJ_DIR$\stm8\hal\itc.h</file>
+      <file>$PROJ_DIR$\stm8\hal\delay.h</file>
+      <file>$PROJ_DIR$\stm8\hal\flash.h</file>
+      <file>$PROJ_DIR$\stm8\hal\gpio.h</file>
       <file>$PROJ_DIR$\stm8\hal\pinlist.h</file>
       <file>$PROJ_DIR$\stm8\hal\stm8s.h</file>
       <file>$PROJ_DIR$\stm8\hal\timers.h</file>
+      <file>$PROJ_DIR$\stm8\wake\wake_base.h</file>
+      <file>$PROJ_DIR$\main.cpp</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
       <file>$PROJ_DIR$\stm8\hal\uart.h</file>
-      <file>$PROJ_DIR$\stm8\wake\led_driver_ncp3066.h</file>
-      <file>$PROJ_DIR$\stm8\hal\clock.h</file>
-      <file>$PROJ_DIR$\stm8\hal\crc.h</file>
-      <file>$PROJ_DIR$\stm8\hal\flash.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+      <file>$PROJ_DIR$\stm8\wake\led_driver_mbi6651.h</file>
       <file>$PROJ_DIR$\stm8\common\string_utils.h</file>
-      <file>$PROJ_DIR$\stm8\common\type_traits.h</file>
-      <file>$PROJ_DIR$\stm8\hal\crc.cpp</file>
       <file>$PROJ_DIR$\stm8\common\circularBuffer.h</file>
-      <file>$PROJ_DIR$\stm8\common\stdint.h</file>
-      <file>$PROJ_DIR$\Release\List\Light.map</file>
+      <file>$PROJ_DIR$\stm8\common\type_traits.h</file>
       <file>$PROJ_DIR$\Release\Obj\crc.o</file>
+      <file>$PROJ_DIR$\Release\List\Light.map</file>
       <file>$PROJ_DIR$\Release\Exe\Device.bin</file>
+      <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
       <file>$PROJ_DIR$\Release\Obj\main.o</file>
       <file>$TOOLKIT_DIR$\lib\dbgstm8smn.a</file>
-      <file>$TOOLKIT_DIR$\lib\dlstm8smn.a</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
       <file>$PROJ_DIR$\stm8\linker\lnkstm8s003f3_bootOffset.icf</file>
-      <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
-      <file>$PROJ_DIR$\Release\Exe\Light.out</file>
-      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
-      <file>$PROJ_DIR$\main.cpp</file>
-      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
       <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
-      <file>$PROJ_DIR$\stm8\wake\wake_base.h</file>
+      <file>$PROJ_DIR$\Release\Exe\Light.out</file>
       <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
-      <file>$TOOLKIT_DIR$\lib\dlstm8smn.h</file>
       <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+      <file>$TOOLKIT_DIR$\lib\dlstm8smn.h</file>
+      <file>$TOOLKIT_DIR$\lib\dlstm8smn.a</file>
+      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+      <file>$PROJ_DIR$\Release\Obj\crc.pbi</file>
+      <file>$PROJ_DIR$\Release\Obj\main.pbi</file>
     </outputs>
     <file>
       <name>[ROOT_NODE]</name>
       <outputs>
         <tool>
           <name>ILINK</name>
-          <file> 26 16</file>
+          <file> 30 22</file>
         </tool>
       </outputs>
     </file>
@@ -237,32 +239,21 @@
       <outputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 17</file>
+          <file> 21</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 36</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 9 15</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Release\Exe\Light.out</name>
-      <outputs>
-        <tool>
-          <name>ILINK</name>
-          <file> 16</file>
+          <file> 1 16 0 15 13 33 32 29 31</file>
         </tool>
         <tool>
-          <name>OBJCOPY</name>
-          <file> 18</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ILINK</name>
-          <file> 24 17 19 21 20</file>
+          <name>BICOMP</name>
+          <file> 29 15 16 0 13 31 33 32 1</file>
         </tool>
       </inputs>
     </file>
@@ -271,13 +262,36 @@
       <outputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 19</file>
+          <file> 26</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 37</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCSTM8</name>
-          <file> 27 4 2 1 12 15 25 29 31 22 34 35 30 33 23 0 8 5 3 7 32 6 14 11 10 9</file>
+          <file> 35 9 16 0 15 13 33 32 29 31 4 7 20 24 25 5 2 10 8 17 11 14 19 18 6 1</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Release\Exe\Light.out</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 22</file>
+        </tool>
+        <tool>
+          <name>OBJCOPY</name>
+          <file> 23</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 28 21 26 34 27</file>
         </tool>
       </inputs>
     </file>
